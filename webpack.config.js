@@ -17,13 +17,13 @@ module.exports = {
     ],
   }, 
   output: {
-    filename: "[name].js",
-    sourceMapFilename: "[file].map",
-    path: path.resolve(__dirname, "app/assets/builds"),
+    filename: '[name].js',
+    sourceMapFilename: '[name].js.map',
+    path: path.resolve(__dirname, 'app/assets/builds'),
   },
   plugins: [
     new webpack.optimize.LimitChunkCountPlugin({
-      maxChunks: 1
-    })
-  ]
+      maxChunks: 1,
+    }),
+  ],
 }
