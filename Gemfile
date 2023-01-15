@@ -68,6 +68,8 @@ group :development do
   # gem "spring"
 end
 
+gem 'foreman', '~> 0.87.2'
+
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
