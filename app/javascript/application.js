@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { createRoot } from 'react-dom/client';
 import axios from 'axios';
 
@@ -28,12 +28,14 @@ function App() {
     [],
   );
 
+  let sortedSearchResult = useMemo(() => searchResults.sort((a,b)=>b[1]-a[1]), [searchResults])
+
   return (
     <main>
       <h1>Welcome</h1>
       <input type="text" placeholder='search input' onChange={(e)=>setSearchTerm(e.target.value)} value={searchTerm}/>
       <ul>
-      {searchResults.length > 0 && (
+      {sortedSearchResult.length > 0 && (
         searchResults.map((element, index)=><li key={index} onClick={handleClick}>{element}</li>)
         )
       } 
