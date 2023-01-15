@@ -21,7 +21,7 @@ module ManageTrie
     clean_string = query[0...-1]
 
     if @trie.search(clean_string.capitalize)
-      analytic = Analytic.find_by(query: clean_string.capitalize) if analytic
+      analytic = Analytic.find_by(query: clean_string.capitalize) 
       analytic.frequency = analytic.frequency + 1
       analytic.save
     else
