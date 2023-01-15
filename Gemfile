@@ -6,11 +6,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 ruby '3.1.2'
 
-# Add jsbundling rails 
-
-gem 'jsbundling-rails'
-
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
 
