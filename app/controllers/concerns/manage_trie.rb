@@ -15,7 +15,7 @@ module ManageTrie
 
   # insert a new query or update the existing query frequency
   # and rebuild the trie in memory
-  def insert_or_update(query)
+  def insert_or_update(query, user_id)
     return unless query.include?('?')
 
     clean_string = query[0...-1]
@@ -28,6 +28,15 @@ module ManageTrie
       Analytic.create(query: clean_string.capitalize, frequency: 1)
     end
 
+    if @user_trie.search(clean_string.capitalize)
+      user_history = SearchHistorie.find_by(user_id:, query: clean_string.capitalize)
+      user_history.frequency = user_history.frequency + 1
+      user_history.save
+    else
+      SearchHistorie.create(user_id:, query: clean_string.capitalize, frequency: 1)
+    end
+
     build
+    build_user_specfic_trie(user_id)
   end
 end

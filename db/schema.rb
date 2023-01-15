@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_14_090405) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_15_101328) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_14_090405) do
     t.index ["query"], name: "index_analytics_on_query"
   end
 
+  create_table "search_histories", force: :cascade do |t|
+    t.string "query"
+    t.integer "frequency"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["query"], name: "index_search_histories_on_query"
+    t.index ["user_id"], name: "index_search_histories_on_user_id"
+  end
+
   create_table "trie_dbs", force: :cascade do |t|
     t.string "key"
     t.text "value"
@@ -30,4 +40,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_14_090405) do
     t.index ["key"], name: "index_trie_dbs_on_key"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "search_histories", "users"
 end
