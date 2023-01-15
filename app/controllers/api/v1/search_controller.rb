@@ -5,7 +5,6 @@ class Api::V1::SearchController < ApplicationController
   # when we finish the search query we can update the frequency of the query or register a new query
   # get a list of auto-completion while typing in real time
   def index
-    p params
     return render json: [] if params[:q].eql?('')
 
     build unless @trie
