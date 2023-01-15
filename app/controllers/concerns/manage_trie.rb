@@ -39,4 +39,16 @@ module ManageTrie
     build
     build_user_specfic_trie(user_id)
   end
+
+  def build_user_specfic_trie(user_id)
+    return unless user_id
+
+    @user_trie = Trie.new
+    @history = SearchHistorie.where(user_id:)
+    return unless @history
+
+    @history.each do |history|
+      @user_trie.insert(history.query.capitalize, history.frequency)
+    end
+  end
 end
