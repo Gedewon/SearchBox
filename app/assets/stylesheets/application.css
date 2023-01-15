@@ -13,73 +13,70 @@
  *= require_tree .
  *= require_self
  */
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
 body,
 html {
-    padding: 0;
-    margin: 0;
-    font-family: 'Montserrat', "IBM Plex Sans Thai Looped", sans-serif;
-    font-size: 20px;
-    background-color: #223141;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', "IBM Plex Sans Thai Looped", sans-serif;
+  font-size: 20px;
+  background-color: #223141;
 }
 
 main {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-h1{
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 100%;
-    display: flex;
+h1 {
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  display: flex;
 }
 
-ul{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    background-color: white;
-    margin: 0 20px;
-    padding: 6px;
-    border-radius: 0 0 10px 10px;
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  background-color: white;
+  margin: 0 20px;
+  padding: 6px;
+  border-radius: 0 0 10px 10px;
 }
 
-li{
-        margin-top: 9px;
-        color: #3d3d3d;
-        display: flex;
-        align-items: center;
-        width: auto;
-        padding: 7px;
-        border-radius: 8px;
-        text-decoration: none;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            background-color: #eaeaea;
+li {
+  margin-top: 9px;
+  color: #3d3d3d;
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding: 7px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #eaeaea;
 }
 
 p {
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 100%;
-    display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  display: flex;
 }
 
 input[type="text"] {
-    width: 100%;
-    height: 40px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 20px;
-    line-height: 20px;
-    font-family: "IBM Plex Sans Thai Looped", sans-serif;
-    padding: 20px;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  padding: 20px;
   border: 1px solid #ccc;
 }
