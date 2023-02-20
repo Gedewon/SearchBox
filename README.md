@@ -91,3 +91,4 @@ Feel free to check the [issues page](https://github.com/Gedewon/SearchBox/issues
 
 Give a ⭐️ if you like this project!
 
+

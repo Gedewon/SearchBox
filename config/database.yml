@@ -25,6 +25,4 @@ test:
 
 production:
   <<: *default
-  database: Mono-ReactRails_production
-  username: Mono-ReactRails
-  password: <%= ENV["Mono-ReactRails_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
